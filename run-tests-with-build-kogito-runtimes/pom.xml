@@ -55,89 +55,190 @@
           <!-- kogito-runtimes tests were not designed to run in parallel -->
           <parallelThreads>1</parallelThreads>
           <pomIncludes>
-            <!-- addons -->
-            <pomInclude>kogito-runtimes*/addons/cloudevents/*/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/addons/events/knative-eventing-addon/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/addons/events/kogito-event-driven-decisions/*/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/addons/events/kogito-events-reactive-messaging-addon/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/addons/events/kogito-events-spring-boot-addon/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/addons/explainability-addon/*/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/addons/jobs/*/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/addons/monitoring/monitoring-core/*/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/addons/monitoring/monitoring-elastic/*/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/addons/monitoring/monitoring-prometheus/*/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/addons/persistence/*/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/addons/predictions/*/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/addons/process-management/*/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/addons/process-svg/*/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/addons/tracing/*/pom.xml</pomInclude>
-
-            <!-- api -->
-            <pomInclude>kogito-runtimes*/api/kogito-api/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/api/kogito-internal/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/api/kogito-services/pom.xml</pomInclude>
-
-            <!-- drools -->
-            <pomInclude>kogito-runtimes*/drools/drools-core-static/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/drools/kogito-dmn/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/drools/kogito-pmml/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/drools/kogito-ruleunits/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/drools/kogito-scenario-simulation/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/drools/kogito-pmml-openapi/pom.xml</pomInclude>
-
-            <!-- grafana-api -->
-            <pomInclude>kogito-runtimes*/grafana-api/pom.xml</pomInclude>
-
-            <!-- integration-tests -->
-            <pomInclude>kogito-runtimes*/integration-tests/*/pom.xml</pomInclude>
-
-            <!-- jbpm -->
-            <pomInclude>kogito-runtimes*/jbpm/jbpm-bpmn2/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/jbpm/jbpm-flow-builder/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/jbpm/jbpm-flow/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/jbpm/jbpm-serverless-workflow/pom.xml</pomInclude>
-
-            <!-- kogito-cloud-services -->
-            <pomInclude>kogito-runtimes*/kogito-cloud-services/kogito-cloud-kubernetes-client/pom.xml</pomInclude>
-
-            <!-- kogito-codegen-modules -->
-            <pomInclude>kogito-runtimes*/kogito-codegen-modules/kogito-codegen-api/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/kogito-codegen-modules/kogito-codegen-core/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/kogito-codegen-modules/kogito-codegen-decisions/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/kogito-codegen-modules/kogito-codegen-integration-tests/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/kogito-codegen-modules/kogito-codegen-predictions/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/kogito-codegen-modules/kogito-codegen-processes/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/kogito-codegen-modules/kogito-codegen-rules/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/kogito-codegen-modules/kogito-codegen-sample/kogito-codegen-sample-generator/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/kogito-codegen-modules/kogito-codegen-sample/kogito-codegen-sample-runtime/pom.xml</pomInclude>
-
-            <!-- kogito-quarkus-parent -->
-            <pomInclude>kogito-runtimes*/kogito-quarkus-parent/kogito-quarkus-decisions-extension/kogito-quarkus-decisions-integration-test/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/kogito-quarkus-parent/kogito-quarkus-decisions-extension/kogito-quarkus-decisions-integration-test-hot-reload/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/kogito-quarkus-parent/kogito-quarkus-extension-common/kogito-quarkus-common-deployment/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/kogito-quarkus-parent/kogito-quarkus-extension/kogito-quarkus-deployment/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/kogito-quarkus-parent/kogito-quarkus-extension/kogito-quarkus-integration-test/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/kogito-quarkus-parent/kogito-quarkus-extension/kogito-quarkus-integration-test-hot-reload/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/kogito-quarkus-parent/kogito-quarkus-predictions-extension/kogito-quarkus-predictions-integration-test/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/kogito-quarkus-parent/kogito-quarkus-rules-extension/kogito-quarkus-rules-integration-test/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/kogito-quarkus-parent/kogito-quarkus-rules-extension/kogito-quarkus-rules-integration-test-hot-reload/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/kogito-quarkus-parent/kogito-quarkus-rules-extension/kogito-quarkus-rules-integration-test-legacy/pom.xml</pomInclude>
-            <pomInclude>kogito-runtimes*/kogito-quarkus-parent/kogito-quarkus-rules-extension/kogito-quarkus-rules-integration-test-session/pom.xml</pomInclude>
-
-            <!-- kogito-workitems -->
-            <pomInclude>kogito-runtimes*/kogito-workitems/pom.xml</pomInclude>
+            <!--
+              Includes generated as:
+              mvn -q -am exec:exec -Dexec.executable="pwd" >> all.txt
+              sort -r all.txt | awk 'a!~"^"$0{a=$0;print}' | sort -u >> leaf_poms_includes.txt
+              sed -r 's#.*(kogito-runtimes)/(.*)#<pomInclude>\1-*/\2/pom.xml</pomInclude>#' leaf_poms_includes.txt
+              Reference:
+                awk command - https://stackoverflow.com/a/48672202
+            -->
+            <pomInclude>kogito-runtimes-*/addons/cloudevents/cloudevents-common-addon/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/cloudevents/cloudevents-quarkus-addon-it/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/cloudevents/cloudevents-spring-boot-addon-it/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/cloudevents/cloudevents-utils/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/events/knative-eventing-addon/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/events/kogito-event-driven-decisions/kogito-event-driven-decisions-common/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/events/kogito-event-driven-decisions/kogito-event-driven-decisions-quarkus-addon/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/events/kogito-event-driven-decisions/kogito-event-driven-decisions-springboot-addon/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/events/kogito-events-reactive-messaging-addon/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/events/kogito-events-spring-boot-addon/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/explainability-addon/explainability-addon-common/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/explainability-addon/explainability-quarkus-addon/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/explainability-addon/explainability-springboot-addon/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/jobs/jobs-api/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/jobs/jobs-management-common/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/jobs/jobs-management-quarkus-addon/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/jobs/jobs-management-springboot-addon/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/kogito-rest-exception-handler/kogito-rest-exception-handler-common/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/kogito-rest-exception-handler/kogito-rest-exception-handler-quarkus/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/kogito-rest-exception-handler/kogito-rest-exception-handler-springboot/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/monitoring/monitoring-core/monitoring-core-common/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/monitoring/monitoring-core/monitoring-core-quarkus-addon/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/monitoring/monitoring-core/monitoring-core-springboot-addon/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/monitoring/monitoring-elastic/monitoring-elastic-common/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/monitoring/monitoring-elastic/monitoring-elastic-quarkus-addon/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/monitoring/monitoring-elastic/monitoring-elastic-springboot-addon/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/monitoring/monitoring-prometheus/monitoring-prometheus-common/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/monitoring/monitoring-prometheus/monitoring-prometheus-quarkus-addon/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/monitoring/monitoring-prometheus/monitoring-prometheus-springboot-addon/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/persistence/filesystem-persistence-addon/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/persistence/infinispan-persistence-addon/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/persistence/infinispan-quarkus-health-addon/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/persistence/kafka-persistence-addon/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/persistence/mongodb-persistence-addon/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/persistence/protobuf-persistence-common/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/predictions/kogito-predictions-api/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/predictions/kogito-predictions-smile-addon/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/process-management/process-management-addon/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/process-management/process-management-common/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/process-management/process-management-springboot-addon/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/process-svg/process-svg-common/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/process-svg/process-svg-quarkus-addon/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/task-management/task-management-common/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/task-management/task-management-quarkus-addon/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/task-management/task-management-springboot-addon/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/tracing/tracing-decision-api/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/tracing/tracing-decision-common/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/tracing/tracing-decision-quarkus-addon/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/tracing/tracing-decision-springboot-addon/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/addons/tracing/typedvalue-api/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/api/kogito-api/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/api/kogito-events-api/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/api/kogito-services/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/api/kogito-timer/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/archetypes/kogito-quarkus-archetype/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/archetypes/kogito-quarkus-dm-archetype/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/archetypes/kogito-springboot-archetype/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/archetypes/kogito-springboot-dm-archetype/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/drools/drools-compiler/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/drools/drools-core-dynamic/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/drools/drools-core-static/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/drools/drools-decisiontables/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/drools/kogito-dmn/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/drools/kogito-drools-model/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/drools/kogito-pmml-api-dependencies/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/drools/kogito-pmml-dependencies/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/drools/kogito-pmml-openapi/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/drools/kogito-ruleunits/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/drools/kogito-scenario-simulation/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/grafana-api/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/integration-tests/integration-tests-kogito-plugin/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/integration-tests/integration-tests-quarkus-decisions/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/integration-tests/integration-tests-quarkus-predictions/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/integration-tests/integration-tests-quarkus-processes/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/integration-tests/integration-tests-quarkus-rules/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/integration-tests/integration-tests-springboot/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/jbpm/jbpm-bpmn2/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/jbpm/jbpm-flow-builder/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/jbpm/jbpm-serverless-workflow/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/jbpm/process-serialization-protobuf/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/jbpm/process-workitems/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/kogito-bom/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/kogito-build-parent/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/kogito-cloud-services/kogito-cloud-kubernetes-client/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/kogito-cloud-services/kogito-cloud-workitems/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/kogito-codegen-modules/kogito-codegen-api/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/kogito-codegen-modules/kogito-codegen-core/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/kogito-codegen-modules/kogito-codegen-decisions/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/kogito-codegen-modules/kogito-codegen-integration-tests/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/kogito-codegen-modules/kogito-codegen-openapi/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/kogito-codegen-modules/kogito-codegen-predictions/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/kogito-codegen-modules/kogito-codegen-processes/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/kogito-codegen-modules/kogito-codegen-rules/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/kogito-codegen-modules/kogito-codegen-sample/kogito-codegen-sample-generator/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/kogito-codegen-modules/kogito-codegen-sample/kogito-codegen-sample-runtime/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/kogito-ide-config/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/kogito-maven-plugin/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/kogito-quarkus-parent/bom/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/kogito-quarkus-parent/kogito-quarkus-decisions-extension/kogito-quarkus-decisions-deployment/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/kogito-quarkus-parent/kogito-quarkus-decisions-extension/kogito-quarkus-decisions-integration-test-hot-reload/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/kogito-quarkus-parent/kogito-quarkus-extension-common/kogito-quarkus-common-deployment/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/kogito-quarkus-parent/kogito-quarkus-extension/kogito-quarkus-deployment/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/kogito-quarkus-parent/kogito-quarkus-extension/kogito-quarkus-integration-test-hot-reload/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/kogito-quarkus-parent/kogito-quarkus-extension/kogito-quarkus-integration-test-maven-devmode/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/kogito-quarkus-parent/kogito-quarkus-predictions-extension/kogito-quarkus-predictions-deployment/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/kogito-quarkus-parent/kogito-quarkus-predictions-extension/kogito-quarkus-predictions-integration-test/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/kogito-quarkus-parent/kogito-quarkus-rules-extension/kogito-quarkus-rules-deployment/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/kogito-quarkus-parent/kogito-quarkus-rules-extension/kogito-quarkus-rules-integration-test-hot-reload/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/kogito-quarkus-parent/kogito-quarkus-rules-extension/kogito-quarkus-rules-integration-test-legacy/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/kogito-quarkus-parent/kogito-quarkus-rules-extension/kogito-quarkus-rules-integration-test-session/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/kogito-quarkus-parent/kogito-quarkus-serverless-workflow-extension/kogito-quarkus-serverless-workflow-deployment/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/kogito-quarkus-parent/kogito-quarkus-serverless-workflow-extension/kogito-quarkus-serverless-workflow-integration-test/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/kogito-springboot/kogito-springboot-starter/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/kogito-test-utils/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/kogito-workitems/kogito-openapi-workitem/pom.xml</pomInclude>
+            <pomInclude>kogito-runtimes-*/kogito-workitems/kogito-rest-workitem/pom.xml</pomInclude>
           </pomIncludes>
           <pomExcludes>
-            <!-- archetypes -->
-            <pomExclude>kogito-runtimes*/archetypes/*/pom.xml</pomExclude>
-
-            <!-- integration-tests -->
-            <pomExclude>kogito-runtimes*/integration-tests/integration-tests-kogito-plugin/pom.xml</pomExclude>
-            <pomExclude>kogito-runtimes*/integration-tests/integration-tests-springboot/pom.xml</pomExclude>
-
-            <!-- kogito-cloud-services -->
-            <!-- java.net.ConnectException: Failed to connect to psi-rhel8-docker-20658/0:0:0:0:0:0:0:1:59491 -->
-            <pomExclude>kogito-runtimes*/kogito-cloud-services/kogito-cloud-workitems/pom.xml</pomExclude>
+            <!--
+              Excludes automatically generated as
+              mvn -q -am exec:exec -Dexec.executable="pwd" -Dproductized > prod.txt
+              mvn -q -am exec:exec -Dexec.executable="pwd" > all.txt
+              diff -\-new-line-format="" -\-unchanged-line-format="" all.txt prod.txt > non-prod.txt
+              sort -r non-prod.txt | awk 'a!~"^"$0{a=$0;print}' | sort -u > leaf_poms_excludes.txt
+              sed -r 's#.*(kogito-runtimes)/(.*)#<pomExclude>\1-*/\2/**/pom.xml</pomExclude>#' leaf_poms_excludes.txt
+              Reference:
+                awk command - https://stackoverflow.com/a/48672202
+            -->
+            <pomExclude>kogito-runtimes-*/addons/cloudevents/cloudevents-quarkus-addon-it/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/addons/cloudevents/cloudevents-spring-boot-addon-it/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/addons/events/kogito-events-reactive-messaging-addon/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/addons/events/kogito-events-spring-boot-addon/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/addons/explainability-addon/explainability-addon-common/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/addons/explainability-addon/explainability-quarkus-addon/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/addons/explainability-addon/explainability-springboot-addon/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/addons/jobs/jobs-api/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/addons/jobs/jobs-management-common/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/addons/jobs/jobs-management-quarkus-addon/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/addons/jobs/jobs-management-springboot-addon/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/addons/kogito-rest-exception-handler/kogito-rest-exception-handler-common/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/addons/kogito-rest-exception-handler/kogito-rest-exception-handler-quarkus/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/addons/kogito-rest-exception-handler/kogito-rest-exception-handler-springboot/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/addons/persistence/filesystem-persistence-addon/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/addons/persistence/infinispan-persistence-addon/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/addons/persistence/infinispan-quarkus-health-addon/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/addons/persistence/kafka-persistence-addon/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/addons/persistence/mongodb-persistence-addon/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/addons/persistence/protobuf-persistence-common/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/addons/predictions/kogito-predictions-api/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/addons/predictions/kogito-predictions-smile-addon/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/addons/process-management/process-management-addon/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/addons/process-management/process-management-common/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/addons/process-management/process-management-springboot-addon/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/addons/process-svg/process-svg-common/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/addons/process-svg/process-svg-quarkus-addon/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/addons/task-management/task-management-common/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/addons/task-management/task-management-quarkus-addon/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/addons/task-management/task-management-springboot-addon/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/addons/tracing/tracing-decision-api/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/addons/tracing/tracing-decision-common/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/addons/tracing/tracing-decision-quarkus-addon/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/addons/tracing/tracing-decision-springboot-addon/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/addons/tracing/typedvalue-api/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/archetypes/kogito-quarkus-archetype/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/archetypes/kogito-springboot-archetype/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/integration-tests/integration-tests-kogito-plugin/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/integration-tests/integration-tests-quarkus-decisions/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/integration-tests/integration-tests-quarkus-predictions/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/integration-tests/integration-tests-quarkus-processes/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/integration-tests/integration-tests-quarkus-rules/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/integration-tests/integration-tests-springboot/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/kogito-cloud-services/kogito-cloud-kubernetes-client/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/kogito-cloud-services/kogito-cloud-workitems/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/kogito-codegen-modules/kogito-codegen-integration-tests/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/kogito-codegen-modules/kogito-codegen-sample/kogito-codegen-sample-generator/**/pom.xml</pomExclude>
+            <pomExclude>kogito-runtimes-*/kogito-codegen-modules/kogito-codegen-sample/kogito-codegen-sample-runtime/**/pom.xml</pomExclude>
           </pomExcludes>
         </configuration>
       </plugin>
